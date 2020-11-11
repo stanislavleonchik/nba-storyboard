@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		CB455BE22559B186000B0C3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455BE12559B186000B0C3E /* AppDelegate.swift */; };
 		CB455BE42559B186000B0C3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455BE32559B186000B0C3E /* SceneDelegate.swift */; };
-		CB455BE62559B186000B0C3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455BE52559B186000B0C3E /* ViewController.swift */; };
 		CB455BE92559B186000B0C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB455BE72559B186000B0C3E /* Main.storyboard */; };
 		CB455BEB2559B189000B0C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB455BEA2559B189000B0C3E /* Assets.xcassets */; };
 		CB455BEE2559B189000B0C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB455BEC2559B189000B0C3E /* LaunchScreen.storyboard */; };
 		CB455BF92559B189000B0C3E /* NBAPLayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455BF82559B189000B0C3E /* NBAPLayersTests.swift */; };
 		CB455C042559B189000B0C3E /* NBAPLayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455C032559B189000B0C3E /* NBAPLayersUITests.swift */; };
+		CB455C282559B6FB000B0C3E /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455C272559B6FB000B0C3E /* PlayersViewController.swift */; };
+		CB455C2D2559BD99000B0C3E /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455C2C2559BD99000B0C3E /* PlayerDetailsViewController.swift */; };
+		CB53DE1D255ACD980033044D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53DE1C255ACD980033044D /* Player.swift */; };
+		CBDF2175255BD41C00ECFC18 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF2174255BD41C00ECFC18 /* TeamDetailsViewController.swift */; };
+		CBDF217A255BDFF400ECFC18 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF2179255BDFF400ECFC18 /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		CB455BDE2559B186000B0C3E /* NBAPLayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPLayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB455BE12559B186000B0C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB455BE32559B186000B0C3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB455BE52559B186000B0C3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB455BE82559B186000B0C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB455BEA2559B189000B0C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB455BED2559B189000B0C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		CB455BFF2559B189000B0C3E /* NBAPLayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBAPLayersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB455C032559B189000B0C3E /* NBAPLayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAPLayersUITests.swift; sourceTree = "<group>"; };
 		CB455C052559B189000B0C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB455C272559B6FB000B0C3E /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		CB455C2C2559BD99000B0C3E /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		CB53DE1C255ACD980033044D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CBDF2174255BD41C00ECFC18 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		CBDF2179255BDFF400ECFC18 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +109,14 @@
 			children = (
 				CB455BE12559B186000B0C3E /* AppDelegate.swift */,
 				CB455BE32559B186000B0C3E /* SceneDelegate.swift */,
-				CB455BE52559B186000B0C3E /* ViewController.swift */,
 				CB455BE72559B186000B0C3E /* Main.storyboard */,
 				CB455BEA2559B189000B0C3E /* Assets.xcassets */,
 				CB455BEC2559B189000B0C3E /* LaunchScreen.storyboard */,
+				CB455C272559B6FB000B0C3E /* PlayersViewController.swift */,
+				CB53DE1C255ACD980033044D /* Player.swift */,
+				CB455C2C2559BD99000B0C3E /* PlayerDetailsViewController.swift */,
+				CBDF2179255BDFF400ECFC18 /* Team.swift */,
+				CBDF2174255BD41C00ECFC18 /* TeamDetailsViewController.swift */,
 				CB455BEF2559B189000B0C3E /* Info.plist */,
 			);
 			path = NBAPLayers;
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB455BE62559B186000B0C3E /* ViewController.swift in Sources */,
+				CB455C2D2559BD99000B0C3E /* PlayerDetailsViewController.swift in Sources */,
 				CB455BE22559B186000B0C3E /* AppDelegate.swift in Sources */,
+				CBDF217A255BDFF400ECFC18 /* Team.swift in Sources */,
 				CB455BE42559B186000B0C3E /* SceneDelegate.swift in Sources */,
+				CB53DE1D255ACD980033044D /* Player.swift in Sources */,
+				CBDF2175255BD41C00ECFC18 /* TeamDetailsViewController.swift in Sources */,
+				CB455C282559B6FB000B0C3E /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
