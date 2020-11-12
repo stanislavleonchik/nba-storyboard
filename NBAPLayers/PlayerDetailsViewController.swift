@@ -24,6 +24,10 @@ class PlayerDetailsViewController: UIViewController {
         // Lakers, Los Angeles, Western conferention
         // Heat, Miami, East
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let teamDetailsViewController = storyboard.instantiateInitialViewController() as! TeamDetailsViewController
+        let teamDetailsViewController = storyboard.instantiateViewController(identifier: "TeamDetailsViewController") as! TeamDetailsViewController
+        teamDetailsViewController.team = player?.teamName
+        
+        
+        navigationController?.pushViewController(teamDetailsViewController, animated: true)
     }
 }

@@ -181,13 +181,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="city" destination="LHv-Ez-sbu" id="sfI-QY-RzI"/>
+                        <outlet property="cityLabel" destination="LHv-Ez-sbu" id="WFS-Ig-2qS"/>
                         <outlet property="conference" destination="DBU-CJ-7d6" id="3vh-NL-WrZ"/>
+                        <outlet property="conferenceLabel" destination="DBU-CJ-7d6" id="dhU-xb-lUM"/>
                         <outlet property="teamName" destination="LHv-Ez-sbu" id="r2E-95-NW5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3p-gO-xwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-60"/>
+            <point key="canvasLocation" x="41" y="-60"/>
         </scene>
     </scenes>
     <resources>

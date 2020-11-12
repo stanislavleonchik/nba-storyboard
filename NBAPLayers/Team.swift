@@ -10,6 +10,7 @@ struct Team {
     let name: String
     let city: String
     let conference: String
+    // Computed property 
     var fullName: String {
         return name + " " + city
     }
