@@ -1,13 +1,13 @@
 //
-//  NBAPLayersUITests.swift
-//  NBAPLayersUITests
+//  NBAPlayersUITests.swift
+//  NBAPlayersUITests
 //
-//  Created by Stanislav Leonchik on /911/20.
+//  Created by Aleksandr Anosov on 09.11.2020.
 //
 
 import XCTest
 
-class NBAPLayersUITests: XCTestCase {
+class NBAPlayersUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
