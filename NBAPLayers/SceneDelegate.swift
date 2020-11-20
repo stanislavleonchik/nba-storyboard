@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  NBAPLayers
-//
-//  Created by Stanislav Leonchik on /911/20.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
