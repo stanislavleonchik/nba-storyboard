@@ -109,16 +109,12 @@
 		305999102559B03D006CF3E5 /* NBAPlayers */ = {
 			isa = PBXGroup;
 			children = (
-				CBD3D6C125645D7E00293A94 /* AppClient.swift */,
+				CBE427A7256E609800DDABB8 /* Screens */,
+				CBE427A6256E608300DDABB8 /* Models */,
+				CBE427A5256E607200DDABB8 /* Network */,
+				CBE427A8256E60C300DDABB8 /* Storyboards */,
 				305999112559B03D006CF3E5 /* AppDelegate.swift */,
 				305999132559B03D006CF3E5 /* SceneDelegate.swift */,
-				305999442559B113006CF3E5 /* PlayersViewController.swift */,
-				3059994C2559B314006CF3E5 /* PlayerDetailsViewController.swift */,
-				CBE07D0D2563FE400031777F /* TeamDetailsViewController.swift */,
-				305999512559B575006CF3E5 /* Player.swift */,
-				CB439FC1256015880094C615 /* Team.swift */,
-				305999172559B03D006CF3E5 /* Main.storyboard */,
-				3059991C2559B040006CF3E5 /* LaunchScreen.storyboard */,
 				3059991A2559B040006CF3E5 /* Assets.xcassets */,
 				3059991F2559B040006CF3E5 /* Info.plist */,
 			);
@@ -141,6 +137,42 @@
 				305999352559B040006CF3E5 /* Info.plist */,
 			);
 			path = NBAPlayersUITests;
+			sourceTree = "<group>";
+		};
+		CBE427A5256E607200DDABB8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CBD3D6C125645D7E00293A94 /* AppClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CBE427A6256E608300DDABB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				305999512559B575006CF3E5 /* Player.swift */,
+				CB439FC1256015880094C615 /* Team.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CBE427A7256E609800DDABB8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				305999442559B113006CF3E5 /* PlayersViewController.swift */,
+				3059994C2559B314006CF3E5 /* PlayerDetailsViewController.swift */,
+				CBE07D0D2563FE400031777F /* TeamDetailsViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CBE427A8256E60C300DDABB8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3059991C2559B040006CF3E5 /* LaunchScreen.storyboard */,
+				305999172559B03D006CF3E5 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

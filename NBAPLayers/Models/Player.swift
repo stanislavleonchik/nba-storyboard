@@ -15,7 +15,7 @@ struct Player: Decodable {
             return "\(heightFeet)'\(heightInches)'"
         } else {
             return "Unknown"
-        }
+        } 
     }
     let position: String
     let team: Team

@@ -14,11 +14,6 @@ enum ApiError: Error {
     case noData
 }
 
-
-
-
-
-
 protocol ApiClient {
     // Zamikanie как только мы получим результат то сделай чтото и передадим туда
 //    похожий код объявления функции
@@ -42,13 +37,19 @@ class ApiClientInmpl: ApiClient {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET" // Neobyazatelno, dlya ponimania chto URLRequest po umolch - GET
         let dataTask = session.dataTask(with: urlRequest, completionHandler: { data, responce, error in
+            
+//            sleep(3) // Контроллируемая 3х секундная загрузка
+//            onResult(.failure(ApiError.noData)) // Создание контроллируемой ошибки
+//            return // Создание контроллируемой ошибки
+            
             //            мы должны обработать данные которые нам пришли понять это ошибка и скомпоновать массив игрокков из данных
             //            будем исплозовать переменную дата
             //                guard конструкция как ИФ если условие выполнено код идет дальше после фигур скобки, но если конструкция не выполнена то идет код              в скобочках и делает ретерн
-            guard let data = data else {
-                onResult(.failure(ApiError.noData))
-                return
-            }
+            guard let data = data
+                else {
+                    onResult(.failure(ApiError.noData))
+                    return
+                }
             do {
 // decodirovat json поле дата в котором информация игроков приходит из джсона: повторяем джсон структуру ответа с сервера try - перед функциями которые могут вызвать ошибку
                 let playerResponse = try JSONDecoder().decode(PlayersResponce.self, from: data)
