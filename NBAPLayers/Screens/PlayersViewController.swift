@@ -6,6 +6,9 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var reloadButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func onReloadButton(_ sender: Any) {
+        reloadData()
+    }
     
     var players: [Player] = []
     let apiClient: ApiClient = ApiClientInmpl()// инициализируем протокол
@@ -19,22 +22,19 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     func reloadData() {
         showLoading()
          // просим апи клиента сходить за данными на вход получаем плеерс сохраняем селф.плеерс = плеерс этот код мы передаем клиенту как только получишь результат выполни этот код
-        apiClient.getPLayers(onResult: {result in // вместо плеерс пишем резалт
-            // возвращаемся в главный поток чтобы отобразить интерфейс
-            DispatchQueue.main.async {
+        apiClient.getPLayers(onResult: {result in DispatchQueue.main.async {// вместо плеерс пишем резалт, возвращаемся в главный поток чтобы отобразить интерфейс
                 switch result {
-                case .success(let players):
-                    self.showData()
-                    self.players = players
-                    self.tableView.reloadData()// данные изменились а в ТаблеВью мы ничего не подправаили магическая функция заставит данные перерисоваться
-                    
-                case .failure:
-                    self.players = []
-                    self.tableView.reloadData()
-                    self.showError()
-                }
-            }
-        })
+                    case .success(let players):
+                        self.showData()
+                        self.players = players
+                        self.tableView.reloadData()// данные изменились а в ТаблеВью мы ничего не подправаили магическая функция заставит данные перерисоваться
+                        
+                    case .failure:
+                        self.players = []
+                        self.tableView.reloadData()
+                        self.showError()
+                 }
+            }})
     }
     
     func showLoading() { // Метод - покажи мне состояние загрузки
@@ -51,9 +51,6 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
         activityIndicatorView.stopAnimating()
         errorLabel.isHidden = false
         reloadButton.isHidden = false
-    }
-    @IBAction func onReloadButton(_ sender: Any) {
-        reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count

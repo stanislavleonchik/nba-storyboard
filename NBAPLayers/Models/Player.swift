@@ -28,7 +28,6 @@ struct Player: Decodable {
         case heightInches = "height_inches"
         case position = "position"
         case team = "team"
-
     }
 }
 // создаем структуру для получения джсона

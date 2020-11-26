@@ -5,6 +5,5 @@ struct Team: Decodable {
     let conference: String
     var fullName: String {return city + " " + name}
     }
-
-let lakers = Team(name: "Lakers", city: "Los Angeles", conference: "West")
-let heat = Team(name: "Heat", city: "Miami", conference: "East")
+//let lakers = Team(name: "Lakers", city: "Los Angeles", conference: "West")
+//let heat = Team(name: "Heat", city: "Miami", conference: "East")
