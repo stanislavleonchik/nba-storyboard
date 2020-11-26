@@ -8,7 +8,7 @@
 import Foundation
 
 struct Game: Decodable {
-    let date: String
+    let rowDate: String
     let homeTeamScore: Int
     let visitorTeamScore: Int
     let season: Int
@@ -21,9 +21,12 @@ struct Game: Decodable {
     var name: String {
         return homeTeam.name + " vs " + visitorTeam.name
     }
+    var date: String {
+        return String(rowDate[..<rowDate.index(rowDate.startIndex, offsetBy: 10)])
+    }
     
     enum CodingKeys: String, CodingKey {
-        case date = "date"
+        case rowDate = "date"
         case homeTeamScore = "home_team_score"
         case visitorTeamScore = "visitor_team_score"
         case season = "season"
